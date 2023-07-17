@@ -198,49 +198,120 @@ a {
 
 /* Main content */
 
-.main-content {
-  padding: 16px;
+.main {
+  padding: 32px;
   background-color: #ECFEFF;
   display: grid;
-  grid-template-columns: 1fr 250px;
-  gap: 16px;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 32px;
 }
 
-.main-content h2 {
-  margin-top: 16px;
+.main h2 {
+  /* margin-top: 16px; */
   margin-bottom: 8px;
-  font-size: 1.3rem;
-  font-weight: 900;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.project-cards {
+.main-projects-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 32px;
 }
 
-.card {
+.main-card {
+  box-sizing: border-box;
   border-radius: 8px;
-  padding: 16px;
   background-color: white;
-  box-shadow: 0 0 4px 2px var(--shadow-color);
+  box-shadow: 2px 2px 4px 2px var(--shadow-color);
 }
 
-.project-cards .card h3 {
-  margin-bottom: 8px;
-  font-size: 1rem;
-  font-weight: 900;
-}
-
-.card .buttons {
-  margin-top: 16px;
+.main-projects .main-card {
+  position: relative;
+  padding: 32px 16px 16px;
+  height: 190px;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  align-content: space-between;
+}
+
+.main-projects .main-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.main-projects .main-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.main-card-buttons {
+  display: grid;
+  grid-auto-flow: column;
   gap: 16px;
-  bottom: 16px;
   justify-content: end;
 }
 
-.buttons img {
+.main-card-buttons img {
   width: var(--icon-size);
+}
+
+.main-card-line {
+  position: absolute;
+  left: 0;
+  border-radius: 8px 0 0 8px;
+  width: 8px;
+  height: 100%;
+  background-color: #0E7490;
+}
+
+.main-announcements .main-card {
+  margin-bottom: 32px;
+  padding: 32px;
+}
+
+.main-announcements h3 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.main-announcements p {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.main-announcements hr {
+  color: #CCC;
+  margin: 8px 0;
+}
+
+.main-trending .main-card {
+  padding: 32px;
+  display: grid;
+  gap: 16px;
+}
+
+.main-trend {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  justify-content: start;
+  align-items: center;
+}
+
+.main-trend img {
+  border-radius: 50%;
+  width: 45px;
+}
+
+.main-trend-info h3 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.main-trend-info p {
+  font-size: 0.8rem;
+  color: #777;
 }
