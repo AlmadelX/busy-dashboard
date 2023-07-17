@@ -38,11 +38,11 @@ a {
 .header {
   padding: 16px 32px;
   background-color: white;
+  z-index: 1;
+  box-shadow: 0 8px 4px -4px var(--shadow-color);
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 16px;
-  z-index: 1;
-  box-shadow: 0 8px 4px -4px var(--shadow-color);
 }
 
 .header-search {
@@ -152,43 +152,42 @@ a {
 /* Sidebar */
 
 .sidebar {
-  padding: 16px;
+  padding: 16px 32px;
   grid-row: 1 / 3;
   background-color: var(--main-color);
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: max-content;
   gap: 50px;
   align-content: start;
 }
 
-.logo {
+.sidebar-logo {
   display: grid;
   grid-template-columns: 50px 1fr;
-  align-items: center;
   gap: 8px;
+  align-items: center;
 }
 
-.logo h1 {
-  font-size: 1.7rem;
+.sidebar-logo h1 {
+  font-size: 2rem;
   font-weight: 900;
   color: white;
 }
 
 .sidebar-section {
   display: grid;
-  grid-template-columns: 100%;
   gap: 16px;
 }
 
 .sidebar-section a {
-  align-self: center;
-}
-
-.sidebar-section div {
   display: grid;
-  grid-template-columns: var(--icon-size) 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 16px;
+}
+
+.sidebar-section img {
+  width: var(--icon-size);
 }
 
 .sidebar-section p {
